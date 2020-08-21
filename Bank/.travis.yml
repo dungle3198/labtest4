@@ -1,9 +1,11 @@
 language: java
 os:
     - linux
-dist: trusty
+dist:
+    -trusty
 jdk:
-    - openjdk10
     - openjdk11
 script:
     -mvn clean install
+    -mvn verify
+    -mvn test
